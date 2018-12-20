@@ -1,4 +1,4 @@
-package com.peison.spring.entity;
+package com.peison.spring.dao;
 
 public class User {
 

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.peison.spring.mapper.UserMapper">
-    <resultMap id="BaseResultMap" type="com.peison.spring.entity.User" >
+    <resultMap id="BaseResultMap" type="com.peison.spring.dao.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="user" property="user" jdbcType="VARCHAR" />
         <result column="passwd" property="passwd" jdbcType="VARCHAR" />
@@ -12,5 +12,8 @@
     </resultMap>
     <select id="findAll" resultMap="BaseResultMap">
         select * from user
+    </select>
+    <select id="findByID" parameterType="int" resultMap="BaseResultMap">
+        select * from user where id = #{id}
     </select>
 </mapper>
