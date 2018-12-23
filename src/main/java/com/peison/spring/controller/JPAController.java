@@ -31,4 +31,23 @@ public class JPAController {
     public List<User> getUserByGender(@PathVariable("gender") int gender) {
         return userRepository.findUserByGender(gender);
     }
+
+    @RequestMapping("/getUserAdult")
+    public List<User> getUserAdult() {
+        return  userRepository.findUserByAgeIsGreaterThan(18.0);
+    }
+
+    @RequestMapping("/growUp")
+    public User growUp(int id) {
+        User user = userRepository.findById(id).get();
+        user.setAge(user.getAge()+1);
+        return userRepository.save(user);
+    }
+
+    @RequestMapping("/getUserByName")
+    public User getUserByName(String name) {
+        return userRepository.findByName(name);
+    }
+
+
 }
