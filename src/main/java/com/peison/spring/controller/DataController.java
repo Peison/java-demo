@@ -21,7 +21,7 @@ public class DataController {
     }
 
     @RequestMapping("/getUser/{id}")
-    public List<User> getAllUser(@PathVariable("id") int id) {
+    public List<User> getUser(@PathVariable("id") int id) {
         return userService.getUserByID(id);
     }
 }
