@@ -4,8 +4,10 @@ import com.peison.spring.dao.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserServiceInterface {
     public List<User> getAllUser();
     public List<User> getUserByID(int id);
+    public User getOneByName(String name);
+
 
 }
