@@ -22,7 +22,6 @@ public class DataController {
     @RequestMapping("/getAllUser")
     public List<User> getAllUser()
     {
-        System.out.println(userServiceClass);
         return userServiceClass.getAllUser();
     }
 
