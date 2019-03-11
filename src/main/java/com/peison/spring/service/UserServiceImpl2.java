@@ -14,6 +14,9 @@ public class UserServiceImpl2 implements UserServiceInterface {
     private UserMapper userMapper;
 
     @Override
+    public int insertUser(User user){ return userMapper.insertUser(user);}
+
+    @Override
     public List<User> getAllUser() {
         return userMapper.findAll();
     }

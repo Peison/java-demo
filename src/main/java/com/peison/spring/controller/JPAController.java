@@ -34,7 +34,7 @@ public class JPAController {
 
     @RequestMapping("/getUserAdult")
     public List<User> getUserAdult() {
-        return  userRepository.findUserByAgeIsGreaterThan(18.0);
+        return  userRepository.findUserByAgeIsGreaterThan(18.2);
     }
 
     @RequestMapping("/growUp")

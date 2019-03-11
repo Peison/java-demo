@@ -1,20 +1,17 @@
 package com.peison.spring.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 
-@Entity
-public class User {
+public class UserWithRole {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     private String user;
     private String passwd;
     private int gender;
     private double age;
+    private ArrayList<Role> roles;
 
 
     public Integer getId() { return id; }
@@ -55,4 +52,11 @@ public class User {
         this.age = age;
     }
 
+    public ArrayList<Role> getRole() {
+        return roles;
+    }
+
+    public void setRole(ArrayList<Role> roles) {
+        this.roles = roles;
+    }
 }
